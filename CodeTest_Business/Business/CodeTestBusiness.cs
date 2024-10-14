@@ -1,10 +1,5 @@
 ﻿using CodeTest_Business.Interfaces;
 using CodeTest_Business.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeTest_Business.Business;
 
@@ -13,7 +8,7 @@ namespace CodeTest_Business.Business;
 /// </summary>
 public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
 {
-    //No dependancy Injection required
+    //No dependancy Injection required in this solution
     public CodeTestBusiness() { }
 
     /// <summary>
@@ -23,7 +18,7 @@ public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
     /// <returns>Return business result with subsequence in data or respective messages are stated</returns>
     public BusinessResult<string> GetLongestIncreasingSubSequenceFromFile(string filePath)
     {
-        // Data collectd from File path
+        // Data collected from File path
         var response = GetFileData(filePath);
 
         return response.Status == ReturnStatus.OK 
@@ -38,7 +33,7 @@ public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
     /// <returns>Return business result with subsequence in data or respective messages are stated</returns>
     public BusinessResult<string> GetLongestIncreasingSubSequenceFromString(string integerSequence)
     {
-        //Input string is split in to array
+        //Input string is split into array
         var integerArray = integerSequence.Split(' ');
         var param = new BusinessParameters(integerArray.Length);
 
@@ -48,7 +43,7 @@ public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
             if (int.TryParse(integerArray[param.CurrentSubSequenceStartIndex + param.CurrentSubSequenceLength - 1], out int currentInteger)
                 && int.TryParse(integerArray[param.CurrentSubSequenceStartIndex + param.CurrentSubSequenceLength], out int nextInteger))
             {
-                // Check of the next integer is greater
+                // Check if the next integer is greater
                 if (currentInteger < nextInteger)
                 {
                     //Then increment the current sub sequence length value
@@ -56,7 +51,7 @@ public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
                 }
                 else
                 {
-                    // Else, if so far recorded longest sub sequence is greater then reset the current counter,
+                    // Else, and if, so far recorded longest sub sequence is greater then reset the current counter,
                     // else record the new longest sub sequence values then reset the current counter
                     param = param.LongestSubSequenceLength >= param.CurrentSubSequenceLength
                         ? ResetSubSequenceParam(param)
@@ -65,7 +60,7 @@ public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
             }
             else
             {
-                // Return if any once of the integer's string can't get converted to int
+                // Return if any of the integer's string can't get converted to int
                 return new BusinessResult<string>(ReturnStatus.Error, "Integer conversion exception.");
             }
 
