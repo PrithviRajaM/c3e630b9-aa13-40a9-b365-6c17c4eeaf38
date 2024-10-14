@@ -26,6 +26,6 @@ public class CTController : BaseController
         [FromBody] string filePath
     ) 
         => GenerateAPIResponse(
-            _codeTestBusiness.GetLongestIncreasingSubSequenceFromString(filePath)
+            _codeTestBusiness.GetLongestIncreasingSubSequenceFromFile(filePath)
         );
 }

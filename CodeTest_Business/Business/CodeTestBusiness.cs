@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CodeTest_Business.Business;
 
+/// <summary>
+/// The requested problem solution is defined in this business class
+/// </summary>
 public class CodeTestBusiness : CoreBusiness, ICodeTestBusiness
 {
     //No dependancy Injection required
