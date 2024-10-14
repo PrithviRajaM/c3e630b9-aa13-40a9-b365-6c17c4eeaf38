@@ -6,6 +6,10 @@ public class CoreBusiness
 {
     #region BusinessUtilities
 
+    /// <summary>
+    /// It splices the sub sequence from the original sequence with initial index and length of splice
+    /// </summary>
+    /// <returns>Returns sub sequence</returns>
     internal static T[] SubArray<T>(T[] data, int index, int length)
     {
         T[] result = new T[length];
@@ -13,6 +17,10 @@ public class CoreBusiness
         return result;
     }
 
+    /// <summary>
+    /// The CurrentSubSequence start index and length are reset
+    /// </summary>
+    /// <param name="param">Business params containing the business logic instance with counter values</param>
     internal static BusinessParameters ResetSubSequenceParam(BusinessParameters param)
     {
         param.CurrentSubSequenceStartIndex = param.CurrentSubSequenceStartIndex + param.CurrentSubSequenceLength + 1;
@@ -21,6 +29,9 @@ public class CoreBusiness
         return param;
     }
 
+    /// <summary>
+    /// Sets the longest sub sequence param values
+    /// </summary>
     internal static BusinessParameters SetLongestSequenceParam(BusinessParameters param)
     {
         param.LongestSubSequenceLength = param.CurrentSubSequenceLength;
@@ -34,6 +45,10 @@ public class CoreBusiness
 
     #region FileInteraction
 
+    /// <summary>
+    /// Collectes and relays the file content string
+    /// </summary>
+    /// <returns>File content as string in business result data</returns>
     internal protected BusinessResult<string> GetFileData(string filePath)
     {
         try
@@ -44,52 +59,6 @@ public class CoreBusiness
         {
             return new BusinessResult<string>(ReturnStatus.NotFound, ex.Message);
         }
-    }
-    #endregion
-
-    #region ExceptionResponseMethods
-
-    // Response object in case of an error / exception
-    public static BusinessResult<T> GetErrorBusinessResult<T>(string message)
-    {
-        return new BusinessResult<T>(
-            status: ReturnStatus.Error,
-            message: message
-         );
-    }
-
-    // Response object in case of no data found
-    public static BusinessResult<T> GetNotFoundBusinessResult<T>(string message)
-    {
-        return new BusinessResult<T>()
-        {
-            Status = ReturnStatus.NotFound,
-            Message = message,
-            BusinessResponseCode = "NotFound"
-        };
-    }
-
-    // Response object in case of no data found, but has to return enpty array
-    public static BusinessResult<T> GetNotFoundBusinessResult<T>(T data, string message)
-    {
-        return new BusinessResult<T>()
-        {
-            Data = data,
-            Status = ReturnStatus.NotFound,
-            Message = message,
-            BusinessResponseCode = "NotFound"
-        };
-    }
-
-    // Response object to relay validation error messages
-    public static BusinessResult<T> GetValidationBusinessResult<T>(string message)
-    {
-        return new BusinessResult<T>()
-        {
-            Status = ReturnStatus.ValidationError,
-            Message = message,
-            BusinessResponseCode = "ValidationError"
-        };
     }
     #endregion
 }

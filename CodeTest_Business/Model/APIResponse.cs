@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace CodeTest_Business.Model;
 /// The response body conveyed out of the endpoint
 /// </summary>
 /// <typeparam name="T">Any type of data point to relay out</typeparam>
+[ExcludeFromCodeCoverage]
 public class APIResponse<T>
 {
     public APIResponse(T data, string status, string message)

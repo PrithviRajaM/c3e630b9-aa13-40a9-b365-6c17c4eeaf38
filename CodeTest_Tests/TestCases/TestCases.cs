@@ -1,5 +1,8 @@
-﻿namespace CodeTest_Tests.TestCases;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace CodeTest_Tests.TestCases;
+
+[ExcludeFromCodeCoverage]
 public class TestCases
 {
     public const string TestCase_1_Input = "6 1 5 9 2";
