@@ -6,6 +6,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using JwtBearer.Shared.Authentication;
 using Microsoft.Extensions.Caching.Memory;
+using CodeTest_Business.Interfaces;
+using CodeTest_Business.Business;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -95,6 +97,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddScoped<ICodeTestBusiness, CodeTestBusiness>();
 
 var app = builder.Build();
 
@@ -119,6 +122,6 @@ app.UseCors(x => x
 
 app.UseAuthorization();
 
-app.MapControllers().RequireAuthorization();
+app.MapControllers();//.RequireAuthorization();
 
 app.Run();

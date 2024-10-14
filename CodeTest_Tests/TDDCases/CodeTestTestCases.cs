@@ -1,4 +1,5 @@
 ﻿using CodeTest_Business.Business;
+using CodeTest_Business.Model;
 using Xunit;
 
 namespace CodeTest_Tests.TDDCases;
@@ -20,7 +21,7 @@ public class CodeTestTestCases
         var business = new CodeTestBusiness();
         var response = business.GetLongestIncreasingSubSequenceFromString(_inputString);
 
-        Assert.Equal(_outputString, response);
+        Assert.Equal(_outputString, response.Data);
     }
 
     [Fact]
@@ -30,7 +31,8 @@ public class CodeTestTestCases
         var response = business.GetLongestIncreasingSubSequenceFromString(_invalidInputString);
 
         //Implement Business Result outcome
-        Assert.Equal("", response);
+        Assert.Equal(ReturnStatus.Error, response.Status);
+        Assert.Equal("Integer conversion exception.", response.Message);
     }
 
     [Fact]
@@ -39,7 +41,7 @@ public class CodeTestTestCases
         var business = new CodeTestBusiness();
         var response = business.GetLongestIncreasingSubSequenceFromString(_NoSequenceInputString);
 
-        Assert.Equal("6", response);
+        Assert.Equal("6", response.Data);
     }
 
     [Fact]
@@ -48,7 +50,7 @@ public class CodeTestTestCases
         var business = new CodeTestBusiness();
         var response = business.GetLongestIncreasingSubSequenceFromString(_SingleSequenceInputString);
 
-        Assert.Equal(_SingleSequenceInputString, response);
+        Assert.Equal(_SingleSequenceInputString, response.Data);
     }
 
 }
