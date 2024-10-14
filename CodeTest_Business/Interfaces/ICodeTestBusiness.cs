@@ -1,7 +1,9 @@
-﻿namespace CodeTest_Business.Interfaces;
+﻿using CodeTest_Business.Model;
+
+namespace CodeTest_Business.Interfaces;
 
 public interface ICodeTestBusiness
 {
-    string GetLongestIncreasingSubSequenceFromString(string integerSequence);
-    string GetLongestIncreasingSubSequenceFromFile(string filePath);
+    BusinessResult<string> GetLongestIncreasingSubSequenceFromString(string integerSequence);
+    BusinessResult<string> GetLongestIncreasingSubSequenceFromFile(string filePath);
 }
