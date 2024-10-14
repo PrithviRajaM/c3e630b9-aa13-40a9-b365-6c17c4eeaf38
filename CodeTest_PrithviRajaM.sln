@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTest_Service", "CodeTest_Service\CodeTest_Service.csproj", "{A5047C71-873D-4699-8165-4861FD0B66FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthentication.Shared", "BasicAuthentication.Shared\BasicAuthentication.Shared.csproj", "{23A8961F-D834-45DA-A3C4-B88E2E8BB60C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtBearer.Shared", "JwtBearer.Shared\JwtBearer.Shared.csproj", "{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A5047C71-873D-4699-8165-4861FD0B66FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5047C71-873D-4699-8165-4861FD0B66FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5047C71-873D-4699-8165-4861FD0B66FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A8961F-D834-45DA-A3C4-B88E2E8BB60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A8961F-D834-45DA-A3C4-B88E2E8BB60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A8961F-D834-45DA-A3C4-B88E2E8BB60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A8961F-D834-45DA-A3C4-B88E2E8BB60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

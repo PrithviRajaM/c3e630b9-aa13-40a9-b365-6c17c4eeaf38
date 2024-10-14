@@ -1,0 +1,13 @@
+﻿#nullable enable
+using System.Security.Principal;
+
+namespace JwtBearer.Shared.Authentication;
+
+public class JwtBearerClient : IIdentity
+{
+    public string? AuthenticationType { get; set; }
+
+    public bool IsAuthenticated { get; set; }
+
+    public string? Name { get; set; }
+}
