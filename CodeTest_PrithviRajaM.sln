@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthentication.Shared"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtBearer.Shared", "JwtBearer.Shared\JwtBearer.Shared.csproj", "{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTest_Tests", "CodeTest_Tests\CodeTest_Tests.csproj", "{2CBA96FF-E135-4D1A-9B7B-447E6E13205C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTest_Business", "CodeTest_Business\CodeTest_Business.csproj", "{8294A82F-45A6-4340-9E35-40B4B3B170D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DF3A0FC-0DCF-4A6A-93FE-0D4835893E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CBA96FF-E135-4D1A-9B7B-447E6E13205C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CBA96FF-E135-4D1A-9B7B-447E6E13205C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CBA96FF-E135-4D1A-9B7B-447E6E13205C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CBA96FF-E135-4D1A-9B7B-447E6E13205C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8294A82F-45A6-4340-9E35-40B4B3B170D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8294A82F-45A6-4340-9E35-40B4B3B170D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8294A82F-45A6-4340-9E35-40B4B3B170D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8294A82F-45A6-4340-9E35-40B4B3B170D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
